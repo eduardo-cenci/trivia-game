@@ -1,0 +1,1 @@
+import{f as o,t as i}from"./chunk-KJDUKPVH.js";var s=(()=>{let t=class t{constructor(){this.game=new o(null)}get(){return this.game.value}set(r){this.game.next(r)}};t.\u0275fac=function(n){return new(n||t)},t.\u0275prov=i({token:t,factory:t.\u0275fac,providedIn:"root"});let e=t;return e})();export{s as a};
