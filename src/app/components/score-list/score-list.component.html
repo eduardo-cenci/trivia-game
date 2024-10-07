@@ -1,0 +1,32 @@
+<main class="w-128 max-w-full min-h-screen mx-auto flex flex-col items-center justify-center p-4">
+  <h1 class="text-center text-2xl font-bold capitalize">Scores</h1>
+  @if (items.length) {
+    <table class="table table-sm bg-base-300 mt-12">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Player</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of items; track $index) {
+          <tr>
+            <th>{{ $index + 1 }}</th>
+            <td>{{ item.player }}</td>
+            <td>{{ getTotal(item.scores) }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  } @else {
+    <div role="alert" class="alert mt-12">
+      <ng-icon size="24" name="heroExclamationCircle"></ng-icon>
+      <span>No scores found.</span>
+    </div>
+  }
+  <button class="btn btn-xs btn-ghost capitalize mt-8" type="button" routerLink="/" skipLocationChange>
+    <ng-icon size="14" name="heroArrowLeft"></ng-icon>
+    Back
+  </button>
+</main>

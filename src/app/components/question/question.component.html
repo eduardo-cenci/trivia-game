@@ -1,0 +1,11 @@
+<main class="w-128 max-w-full min-h-screen mx-auto flex flex-col items-center justify-center p-4">
+  <h1 class="text-center text-sm font-bold">Question {{ game.scores.length + 1 }} of {{ game.questions.length }}</h1>
+  <app-countdown #countdown class="mt-6" (timeIsUp)="timeIsUp()" />
+  <p class="w-full font-medium bg-base-300 mt-6 px-6 py-4 rounded-2xl">{{ decodeBase64(current.question) }}</p>
+  @for (answer of answers; track $index) {
+    <button class="btn btn-primary w-full mt-4" type="button" (click)="checkAnswer(answer)" [disabled]="disableActions">
+      {{ decodeBase64(answer) }}
+    </button>
+  }
+</main>
+<app-question-result #resultModal (nextEvent)="next()" />

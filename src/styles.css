@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#toast-container.toast-container {
+  @apply flex flex-col items-center gap-2 p-4;
+}
+
+#toast-container.toast-container .ngx-toastr {
+  @apply alert w-96 max-w-full block m-0 text-left bg-none shadow-none;
+}
+
+#toast-container.toast-container .ngx-toastr.toast-success {
+  @apply alert-success;
+}
+
+#toast-container.toast-container .ngx-toastr.toast-info {
+  @apply alert-info;
+}
+
+#toast-container.toast-container .ngx-toastr.toast-warning {
+  @apply alert-warning;
+}
+
+#toast-container.toast-container .ngx-toastr.toast-error {
+  @apply alert-error;
+}

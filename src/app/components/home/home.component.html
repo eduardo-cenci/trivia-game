@@ -1,0 +1,17 @@
+<main class="w-128 max-w-full min-h-screen mx-auto flex flex-col items-center justify-center p-4">
+  <h1 class="text-8xl text-base-content font-black uppercase">Trivia</h1>
+  <nav class="w-full flex flex-col items-center gap-4 mt-12">
+    <button class="btn w-full capitalize btn-accent" type="button" routerLink="/settings" skipLocationChange>
+      <ng-icon size="24" name="heroPlay"></ng-icon>
+      New game
+    </button>
+    <button class="btn w-full capitalize btn-secondary" type="button" routerLink="/score-list" skipLocationChange>
+      <ng-icon size="24" name="heroListBullet"></ng-icon>
+      Scores
+    </button>
+    <button class="btn w-full capitalize btn-info" type="button" routerLink="/help" skipLocationChange>
+      <ng-icon size="24" name="heroQuestionMarkCircle"></ng-icon>
+      How to play
+    </button>
+  </nav>
+</main>

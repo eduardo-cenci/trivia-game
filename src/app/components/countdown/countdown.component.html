@@ -1,0 +1,4 @@
+<label class="block text-center text-xs font-bold" for="progress-bar">{{ time.toFixed() }} Seconds</label>
+<progress class="progress progress-accent w-56 mt-2" id="progress-bar" [value]="time" [max]="maxTime">
+  {{ time }}
+</progress>

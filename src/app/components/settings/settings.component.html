@@ -1,0 +1,44 @@
+<main class="w-128 max-w-full min-h-screen mx-auto flex flex-col items-center justify-center p-4">
+  <h1 class="text-center text-2xl font-bold capitalize">Game settings</h1>
+  <form class="w-full flex flex-col items-center gap-4 mt-12" [formGroup]="form" (submit)="submit($event)">
+    <input
+      class="input input-bordered input-primary w-full"
+      [class.input-error]="form.get('player')!.invalid && (form.get('player')!.touched || form.get('player')!.dirty)"
+      type="text"
+      name="player"
+      placeholder="Player nick"
+      formControlName="player" />
+    <select
+      class="select select-primary w-full"
+      [class.select-error]="
+        form.get('category')!.invalid && (form.get('category')!.touched || form.get('category')!.dirty)
+      "
+      name="category"
+      formControlName="category">
+      <option value="" disabled selected>Choose category</option>
+      @for (category of categoryList; track $index) {
+        <option [value]="category.id">{{ category.name }}</option>
+      }
+    </select>
+    <select
+      class="select select-primary w-full"
+      [class.select-error]="
+        form.get('difficulty')!.invalid && (form.get('difficulty')!.touched || form.get('difficulty')!.dirty)
+      "
+      name="difficulty"
+      formControlName="difficulty">
+      <option value="" disabled selected>Choose difficulty</option>
+      @for (difficulty of difficultyList; track $index) {
+        <option [value]="difficulty[1]">{{ difficulty[0] }}</option>
+      }
+    </select>
+    <button class="btn w-full capitalize btn-accent" type="submit">
+      <ng-icon size="21" name="heroPlay"></ng-icon>
+      Start
+    </button>
+  </form>
+  <button class="btn btn-xs btn-ghost capitalize mt-8" type="button" routerLink="/" skipLocationChange>
+    <ng-icon size="14" name="heroArrowLeft"></ng-icon>
+    Back
+  </button>
+</main>

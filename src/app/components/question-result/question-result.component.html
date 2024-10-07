@@ -1,0 +1,11 @@
+<dialog #modal id="resultModal" class="modal outline-none">
+  <div class="modal-box flex flex-col items-center text-center">
+    <ng-icon size="140" [name]="success ? 'heroFaceSmile' : 'heroFaceFrown'" />
+    <strong class="text-2xl text-center font-bold">{{ message }}</strong>
+    <span class="text-center mt-4">+ {{ score }} points</span>
+    <button class="btn btn-primary w-full mt-4" type="button" (click)="close()" [disabled]="!modal.open">
+      <ng-icon size="14" name="heroArrowRight"></ng-icon>
+      Next question
+    </button>
+  </div>
+</dialog>
