@@ -1,5 +1,14 @@
 # TriviaGame
 
+[<img src="https://img.shields.io/badge/-Visualizar-333333?logo=githubpages" />](https://eduardo-cenci.github.io/trivia-game/)
+
+![Angular](https://img.shields.io/badge/-Angular-333333?logo=angular)
+![TypeScript](https://img.shields.io/badge/-TypeScript-333333?logo=typescript)
+![HTML](https://img.shields.io/badge/-HTML-333333?logo=HTML5)
+![Tailwind](https://img.shields.io/badge/-Tailwind-333333?logo=tailwindcss)
+![Jest](https://img.shields.io/badge/-Jest-333333?logo=jest)
+![Cypress](https://img.shields.io/badge/-Cypress-333333?logo=cypress)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
 ## Development server
