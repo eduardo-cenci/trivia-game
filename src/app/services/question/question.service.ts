@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { Observable, switchMap } from 'rxjs';
 import { ApiResponse } from '../../interfaces/api-response';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { QuestionDifficulty } from '../../enums/question-difficulty';
 import { QuestionType } from '../../enums/question-type';
 import { TokenService } from '../token/token.service';

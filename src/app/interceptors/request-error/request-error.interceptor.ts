@@ -3,7 +3,7 @@ import { inject } from '@angular/core';
 
 import { catchError, map, throwError } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
-import { environment } from '../../../environments/environment.development';
+import { environment } from '../../../environments/environment';
 import { ApiResponse } from '../../interfaces/api-response';
 import { ResponseCode } from '../../enums/response-code';
 import { TokenService } from '../../services/token/token.service';
