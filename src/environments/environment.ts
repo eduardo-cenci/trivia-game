@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  basePath: '/docs/',
+  basePath: '/trivia-game/',
   apiUrl: 'https://opentdb.com',
   questionAmount: 10,
   maxQuestionTime: 15,
